@@ -36,10 +36,17 @@ subset "$TMP/bd.woff2" "$GIANT" "$OUT/bodoni-display.woff2"
 latin 'https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@28,400' "$TMP/bt.woff2"
 subset "$TMP/bt.woff2" "$LEAD" "$OUT/bodoni-text.woff2"
 
-# Archivo carries body copy, form states and labels: printable ASCII plus the punctuation used.
-ASCII=$(python3 -c "print(''.join(chr(c) for c in range(32, 127)) + '’‘“”–—…')")
+# Archivo carries body copy, states and labels. It ships as four unicode-range slices so each file
+# stays small; the ranges below must match the unicode-range values in index.html.
+CAPS=ABCDEFGHIJKLMNOPQRSTUVWXYZ
+LOWER=abcdefghijklmnopqrstuvwxyz
+DIGITS=0123456789
+PUNCT=".",":;/-+@'\"()?!&%…–—‘’“”·"
 latin 'https://fonts.googleapis.com/css2?family=Archivo:wght@400..500' "$TMP/ar.woff2"
-subset "$TMP/ar.woff2" "$ASCII" "$OUT/archivo.woff2"
+subset "$TMP/ar.woff2" "$CAPS"   "$OUT/archivo-caps.woff2"
+subset "$TMP/ar.woff2" "$LOWER"  "$OUT/archivo-lower.woff2"
+subset "$TMP/ar.woff2" "$DIGITS" "$OUT/archivo-digits.woff2"
+subset "$TMP/ar.woff2" "$PUNCT"  "$OUT/archivo-punct.woff2"
 
 # Shippori Mincho full CJK is several MB; Google's text= parameter returns just these glyphs.
 latin "https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500&text=$(enc "$JA")" "$OUT/shippori-mincho.woff2"
