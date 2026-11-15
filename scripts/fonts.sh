@@ -36,8 +36,10 @@ subset "$TMP/bd.woff2" "$GIANT" "$OUT/bodoni-display.woff2"
 latin 'https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@28,400' "$TMP/bt.woff2"
 subset "$TMP/bt.woff2" "$LEAD" "$OUT/bodoni-text.woff2"
 
-# Archivo carries body copy, so keep latin whole (≈20 KB) instead of subetting it.
-latin 'https://fonts.googleapis.com/css2?family=Archivo:wght@400..500' "$OUT/archivo.woff2"
+# Archivo carries body copy, form states and labels: printable ASCII plus the punctuation used.
+ASCII=$(python3 -c "print(''.join(chr(c) for c in range(32, 127)) + '’‘“”–—…')")
+latin 'https://fonts.googleapis.com/css2?family=Archivo:wght@400..500' "$TMP/ar.woff2"
+subset "$TMP/ar.woff2" "$ASCII" "$OUT/archivo.woff2"
 
 # Shippori Mincho full CJK is several MB; Google's text= parameter returns just these glyphs.
 latin "https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500&text=$(enc "$JA")" "$OUT/shippori-mincho.woff2"
