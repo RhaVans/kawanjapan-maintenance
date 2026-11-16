@@ -1,4 +1,9 @@
 {
+  "functions": {
+    "api/page.js": {
+      "includeFiles": "dist/index.html"
+    }
+  },
   "routes": [
     {
       "src": "^/assets/(.*)$",
