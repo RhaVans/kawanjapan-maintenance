@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>kawanjapan.com is under maintenance</title>
-<meta name="description" content="kawanjapan.com is temporarily down for maintenance. Leave your email and we'll tell you when it's back." />
+<title>kawanjapan.com sedang dalam perbaikan</title>
+<meta name="description" content="kawanjapan.com sedang dalam perbaikan. Situs akan segera kembali." />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="kawanjapan.com is under maintenance" />
-<meta property="og:description" content="kawanjapan.com is temporarily down for maintenance. Leave your email and we'll tell you when it's back." />
+<meta property="og:title" content="kawanjapan.com sedang dalam perbaikan" />
+<meta property="og:description" content="kawanjapan.com sedang dalam perbaikan. Situs akan segera kembali." />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="theme-color" content="#ffffff" />
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
@@ -26,76 +26,74 @@
 @font-face{font-family:Archivo;src:url('/assets/fonts/archivo-punct.woff2') format('woff2');font-weight:400 500;font-display:swap;unicode-range:U+0021-0023,U+0025-002D,U+002F,U+003A-003B,U+003F-0040,U+00B7,U+2013-2014,U+2018-2019,U+201C-201D,U+2026}
 @font-face{font-family:'Shippori Mincho';src:url('/assets/fonts/shippori-mincho.woff2') format('woff2');font-weight:500;font-display:swap}
 
-:root{--sumi:#000;--paper:#fff;--shu:#e8001c;--margin:clamp(20px,3vw,48px);color-scheme:light}
+:root{--sumi:#000;--paper:#fff;--shu:#e8001c;--margin:clamp(20px,3.2vw,48px);color-scheme:light}
 *{box-sizing:border-box}
 html,body{margin:0}
-body{background:var(--paper);color:var(--sumi);font-family:Archivo,system-ui,-apple-system,sans-serif;-webkit-text-size-adjust:100%}
-#ink{position:fixed;inset:0;display:block;width:100%;height:100lvh;z-index:0}
-main{position:relative;z-index:1;min-height:var(--vvh,100dvh);display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:1fr auto;gap:clamp(28px,6vh,72px);
-  padding:calc(var(--margin) + env(safe-area-inset-top)) calc(var(--margin) + env(safe-area-inset-right)) calc(var(--margin) + env(safe-area-inset-bottom)) calc(var(--margin) + env(safe-area-inset-left))}
-.head{align-self:end}
+body{background:var(--paper);color:var(--sumi);font-family:Archivo,system-ui,-apple-system,sans-serif;font-size:1.0625rem;line-height:1.5;-webkit-text-size-adjust:100%}
+
+/* The ink lives in .art and nowhere else: every text pixel sits on paper. */
+main{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;min-height:var(--vvh,100dvh)}
+.art{position:relative;min-height:0;overflow:hidden}
+#ink{position:absolute;inset:0;display:block;width:100%;height:100%}
+.text{position:relative;z-index:1;background:var(--paper);min-height:40dvh;display:flex;flex-direction:column;justify-content:center;gap:clamp(14px,2.4vh,26px);
+  padding:clamp(22px,3.4vh,34px) calc(var(--margin) + env(safe-area-inset-right)) calc(var(--margin) + env(safe-area-inset-bottom)) calc(var(--margin) + env(safe-area-inset-left))}
+
 h1{margin:0;font-weight:400}
-h1[data-mask=on]{color:transparent}
-.lead{display:block;font-family:'Bodoni Text',Georgia,serif;font-size:clamp(1.25rem,2.4vw,2rem);line-height:1.1}
-.giant{display:block;font-family:'Bodoni Display',Georgia,serif;font-size:var(--giant,min(13vw,38vh));line-height:0.82;white-space:nowrap}
+.lead{display:block;font-family:'Bodoni Text',Georgia,serif;font-size:clamp(1.125rem,1.6vw,1.5rem);line-height:1.25}
+.giant{display:block;font-family:'Bodoni Display',Georgia,serif;font-size:var(--giant,15vw);line-height:0.86;white-space:nowrap}
 
-.info{display:grid;grid-template-columns:1fr;gap:clamp(20px,3.5vh,32px);font-size:1.0625rem;line-height:1.5}
-.info p{margin:0;max-width:40ch}
-.info p + p{margin-top:8px}
-.ask{display:grid;gap:12px}
-@media (min-width:1024px){
-  .info{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;gap:32px}
-  .ask{justify-self:end;width:min(100%,26rem)}
-}
-.ja{font-family:'Shippori Mincho',serif;font-size:.9375rem;letter-spacing:.08em}
+.info{display:grid;gap:clamp(12px,1.8vh,18px);max-width:48ch}
+.info p{margin:0}
+.ja{font-family:'Shippori Mincho',serif;font-size:1rem;letter-spacing:.06em}
 
+.motion{align-self:start;min-height:48px;padding:0 2px;border:0;border-radius:0;background:none;color:var(--sumi);
+  font:500 1rem/1.3 Archivo,sans-serif;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.motion:focus-visible{outline:3px solid var(--sumi);outline-offset:4px}
+
+/* Present only when maintenance.config.json sets a notify endpoint. */
 .notify{display:grid;gap:10px}
-.notify label{font-weight:500;font-size:1rem;line-height:1.2}
+.notify label{font-weight:500}
 .row{display:flex;gap:10px}
 input[type=email]{flex:1;min-width:0;height:52px;padding:0 12px;border:2px solid var(--sumi);border-radius:0;background:var(--paper);color:var(--sumi);font:400 1rem/1.2 Archivo,sans-serif}
-.notify button{height:52px;padding:0 24px;border:0;border-radius:0;background:var(--shu);color:var(--paper);font:500 1rem/1.2 Archivo,sans-serif;cursor:pointer;transition:background-color 120ms,color 120ms}
-@media (hover:hover){.notify button:hover{background:var(--sumi)}}
-.notify button:focus-visible{outline:3px solid var(--sumi);outline-offset:3px;background:var(--sumi)}
-input[type=email]:focus-visible{outline:3px solid var(--sumi);outline-offset:3px}
+.notify button{height:52px;padding:0 22px;border:0;border-radius:0;background:var(--shu);color:var(--paper);font:500 1rem/1.2 Archivo,sans-serif;cursor:pointer}
+.notify button:focus-visible,input[type=email]:focus-visible{outline:3px solid var(--sumi);outline-offset:3px}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
-
-.motion{align-self:start;justify-self:start;min-height:44px;margin-top:4px;padding:0;border:0;border-radius:0;background:none;color:var(--sumi);
-  font:500 1rem/1.2 Archivo,sans-serif;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
-.motion:focus-visible{outline:3px solid var(--sumi);outline-offset:3px}
-
-.status{margin:0;font-size:.875rem;line-height:1.4;max-width:40ch}
+.status{margin:0;font-size:.9375rem;line-height:1.4;max-width:44ch}
 .status:empty{display:none}
 
 @media (max-width:479px){.row{flex-direction:column}.notify button{width:100%}}
-@media (max-height:480px) and (orientation:landscape){
-  main{grid-template-rows:auto;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:24px;align-items:end}
+/* Wide and tall: art on the left, the whole text column on paper. */
+@media (min-width:900px){
+  main{grid-template-columns:minmax(0,1fr) minmax(24rem,32rem);grid-template-rows:minmax(0,1fr)}
+  .text{min-height:0;height:100%;justify-content:flex-end;padding-top:clamp(28px,5vh,56px)}
+}
+/* Landscape phones have no vertical room for a stacked layout. */
+@media (orientation:landscape) and (max-height:520px){
+  main{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);grid-template-rows:minmax(0,1fr)}
+  .text{min-height:0;height:100%;justify-content:flex-end;padding-top:20px}
 }
 @media (forced-colors:active){#ink{display:none}}
 </style>
 </head>
 <body>
-<canvas id="ink" aria-hidden="true"></canvas>
 <main>
-  <div class="head">
+  <div class="art"><canvas id="ink" aria-hidden="true"></canvas></div>
+  <div class="text">
     <h1>
-      <span class="lead">kawanjapan.com is currently under</span>
-      <span class="giant">maintenance</span>
+      <span class="lead">kawanjapan.com sedang dalam</span>
+      <span class="giant">perbaikan</span>
     </h1>
-  </div>
-  <div class="info">
-    <div class="say">
-      <p>We're making some changes to the site. It will be back shortly.</p>
+    <div class="info">
+      <p>Kami sedang melakukan pembaruan pada situs. Situs akan segera kembali.</p>
       <!--eta-->
       <!--ja--><p class="ja" lang="ja">ただいまメンテナンス中</p><!--/ja-->
-      <button class="motion" id="motion" type="button" aria-pressed="false">Pause motion</button>
-    </div>
-    <div class="ask">
+      <button class="motion" id="motion" type="button" aria-pressed="false">Jeda animasi</button>
       <!--form-->
       <form class="notify" id="notify" method="post" action="%NOTIFY_ENDPOINT%">
-        <label for="email">Email me once, when it's back</label>
+        <label for="email">Beri tahu saya lewat email</label>
         <div class="row">
-          <input id="email" name="email" type="email" required placeholder="email@example.com" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" />
-          <button type="submit">Notify me</button>
+          <input id="email" name="email" type="email" required placeholder="email@contoh.com" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" />
+          <button type="submit">Beri tahu</button>
         </div>
         <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
       </form>
