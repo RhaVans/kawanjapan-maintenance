@@ -6,7 +6,9 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "fonts": "bash scripts/fonts.sh"
+    "fonts": "bash scripts/fonts.sh",
+    "export": "node scripts/export.mjs",
+    "delete-all": "node scripts/delete-all.mjs"
   },
   "devDependencies": {
     "typescript": "5.9.2",
