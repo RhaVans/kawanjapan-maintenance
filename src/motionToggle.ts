@@ -11,7 +11,7 @@ export function initMotion(): Motion {
   const listeners: ((p: boolean) => void)[] = [];
 
   const render = () => {
-    btn.textContent = playing ? 'Pause motion' : 'Play motion';
+    btn.textContent = playing ? 'Jeda animasi' : 'Mainkan animasi';
     btn.setAttribute('aria-pressed', String(!playing));
   };
 
