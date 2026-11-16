@@ -41,7 +41,7 @@ subset "$TMP/bt.woff2" "$LEAD" "$OUT/bodoni-text.woff2"
 CAPS=ABCDEFGHIJKLMNOPQRSTUVWXYZ
 LOWER=abcdefghijklmnopqrstuvwxyz
 DIGITS=0123456789
-PUNCT=".",":;/-+@'\"()?!&%…–—‘’“”·"
+PUNCT=".,:;/-+@'\"()?!&%…–—‘’“”·"
 latin 'https://fonts.googleapis.com/css2?family=Archivo:wght@400..500' "$TMP/ar.woff2"
 subset "$TMP/ar.woff2" "$CAPS"   "$OUT/archivo-caps.woff2"
 subset "$TMP/ar.woff2" "$LOWER"  "$OUT/archivo-lower.woff2"
