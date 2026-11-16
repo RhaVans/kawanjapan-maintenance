@@ -1,0 +1,44 @@
+{
+  "id": {
+    "title": "kawanjapan.com sedang dalam perbaikan",
+    "lead": "kawanjapan.com sedang dalam",
+    "giant": "perbaikan",
+    "body": "Kami sedang melakukan pembaruan pada situs. Situs akan segera kembali.",
+    "formLead": "Kabari saya saat situs kembali",
+    "label": "Alamat email",
+    "button": "Kabari saya",
+    "helper": "Hanya untuk satu pemberitahuan saat situs kembali.",
+    "invalid": "Masukkan alamat email yang valid.",
+    "sending": "Mengirim",
+    "success": "Terima kasih. Kami akan mengirim satu email saat situs kembali.",
+    "fail": "Belum berhasil terkirim. Coba lagi sebentar lagi."
+  },
+  "en": {
+    "title": "kawanjapan.com is under maintenance",
+    "lead": "kawanjapan.com is currently under",
+    "giant": "maintenance",
+    "body": "We are making some updates to the site. It will be back shortly.",
+    "formLead": "Get one email when the site is back",
+    "label": "Email address",
+    "button": "Notify me",
+    "helper": "Used only for one notice when the site is back.",
+    "invalid": "Enter a valid email address.",
+    "sending": "Sending",
+    "success": "Thank you. We will send one email when the site is back.",
+    "fail": "Could not send yet. Try again shortly."
+  },
+  "ja": {
+    "title": "kawanjapan.com はメンテナンス中",
+    "lead": "kawanjapan.com は現在",
+    "giant": "メンテナンス中",
+    "body": "サイトの更新作業を行っています。まもなく再開します。",
+    "formLead": "復旧したらメールでお知らせします",
+    "label": "メールアドレス",
+    "button": "通知を受け取る",
+    "helper": "復旧のお知らせ1通のみに使用します。",
+    "invalid": "有効なメールアドレスを入力してください。",
+    "sending": "送信中",
+    "success": "ありがとうございます。復旧しましたらメールを1通お送りします。",
+    "fail": "送信できませんでした。しばらくしてからもう一度お試しください。"
+  }
+}
