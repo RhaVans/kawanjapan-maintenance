@@ -9,8 +9,8 @@ trap 'rm -rf "$TMP"' EXIT
 mkdir -p "$OUT"
 
 UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
-GIANT='maintenance'
-LEAD='kawanjapan.com is currently under'
+GIANT='perbaikan'
+LEAD='kawanjapan.com sedang dalam'
 JA='ただいまメンテナンス中'
 
 latin() { # $1 css url, $2 out path (the last url() in the css is the latin subset)
