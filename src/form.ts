@@ -10,7 +10,7 @@ export function initForm() {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     button.disabled = true;
-    status.textContent = 'Sending…';
+    status.textContent = 'Mengirim…';
     try {
       const res = await fetch(form.action, {
         method: 'POST',
@@ -18,17 +18,17 @@ export function initForm() {
         body: JSON.stringify({ email: input.value.trim(), company: honeypot.value }),
       });
       if (res.ok) {
-        status.textContent = "Done. You'll get one email when the site is back.";
+        status.textContent = 'Selesai. Anda akan menerima satu email saat situs kembali.';
         form.reset();
       } else if (res.status === 429) {
-        status.textContent = 'Too many attempts. Try again in a minute.';
+        status.textContent = 'Terlalu banyak percobaan. Coba lagi dalam satu menit.';
       } else if (res.status === 400) {
-        status.textContent = "That email address isn't valid. Check it and try again.";
+        status.textContent = 'Alamat email tidak valid. Periksa lalu coba lagi.';
       } else {
-        status.textContent = 'Something went wrong on our side. Try again in a few minutes.';
+        status.textContent = 'Terjadi kesalahan di sisi kami. Coba lagi beberapa menit lagi.';
       }
     } catch {
-      status.textContent = "Couldn't send. Check your connection and try again.";
+      status.textContent = 'Gagal mengirim. Periksa koneksi Anda lalu coba lagi.';
     } finally {
       button.disabled = false;
     }

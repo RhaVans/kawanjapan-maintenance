@@ -19,11 +19,12 @@ function fitGiant() {
   range.selectNodeContents(span);
   const at100 = range.getBoundingClientRect().width;
   if (!at100) return;
-  const size = Math.min(((available - 1) / at100) * 100, innerHeight * 0.38);
+  // width-fit, but never let the headline eat the art above it
+  const size = Math.min(((available - 1) / at100) * 100, innerHeight * 0.3);
   span.style.fontSize = `${size}px`;
 }
 
-// Keep the form reachable when the phone keyboard opens.
+// Keep the layout correct when the phone keyboard opens.
 const vv = window.visualViewport;
 function setViewportHeight() {
   document.documentElement.style.setProperty('--vvh', `${Math.round(vv?.height ?? innerHeight)}px`);
@@ -40,8 +41,8 @@ if (tier === 'C' || !canvas) {
   canvas?.remove();
 } else {
   const boot = () =>
-    import('./renderer').then(
-      (m) => m.start(canvas, tier, motion),
+    import('./ink').then(
+      (m) => m.start(canvas, motion),
       (err) => {
         console.error('[ink] renderer failed, falling back to paper', err);
         canvas.remove();

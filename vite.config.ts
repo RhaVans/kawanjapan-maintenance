@@ -15,7 +15,7 @@ export default defineConfig({
       transformIndexHtml(html: string) {
         if (!cfg.notifyEndpoint) html = html.replace(/<!--form-->[\s\S]*?<!--\/form-->/g, '');
         if (!cfg.showJapanese) html = html.replace(/<!--ja-->[\s\S]*?<!--\/ja-->/g, '');
-        if (cfg.eta) html = html.replace('<!--eta-->', `<p class="eta">Expected back around ${esc(cfg.eta)}.</p>`);
+        if (cfg.eta) html = html.replace('<!--eta-->', `<p class="eta">Diperkirakan kembali sekitar ${esc(cfg.eta)}.</p>`);
         return html.replaceAll('%NOTIFY_ENDPOINT%', esc(cfg.notifyEndpoint ?? ''));
       },
     },
