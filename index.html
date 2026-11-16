@@ -5,100 +5,129 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>kawanjapan.com sedang dalam perbaikan</title>
 <meta name="description" content="kawanjapan.com sedang dalam perbaikan. Situs akan segera kembali." />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="kawanjapan.com sedang dalam perbaikan" />
-<meta property="og:description" content="kawanjapan.com sedang dalam perbaikan. Situs akan segera kembali." />
-<meta name="twitter:card" content="summary_large_image" />
 <meta name="theme-color" content="#ffffff" />
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
-<link rel="preload" href="/assets/fonts/bodoni-display.woff2?v=2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/bodoni-text.woff2?v=2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/archivo-lower.woff2?v=2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/archivo-caps.woff2?v=2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/archivo-digits.woff2?v=2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/archivo-punct.woff2?v=2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/bodoni-display.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/bodoni-text.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/archivo-lower.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/archivo-caps.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/archivo-digits.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/archivo-punct.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/shippori-mincho.woff2" as="font" type="font/woff2" crossorigin />
 <style>
-@font-face{font-family:'Bodoni Display';src:url('/assets/fonts/bodoni-display.woff2?v=2') format('woff2');font-weight:500;font-display:block}
-@font-face{font-family:'Bodoni Text';src:url('/assets/fonts/bodoni-text.woff2?v=2') format('woff2');font-weight:400;font-display:block}
-@font-face{font-family:Archivo;src:url('/assets/fonts/archivo-lower.woff2?v=2') format('woff2');font-weight:400 500;font-display:swap;unicode-range:U+0061-007A}
-@font-face{font-family:Archivo;src:url('/assets/fonts/archivo-caps.woff2?v=2') format('woff2');font-weight:400 500;font-display:swap;unicode-range:U+0041-005A}
-@font-face{font-family:Archivo;src:url('/assets/fonts/archivo-digits.woff2?v=2') format('woff2');font-weight:400 500;font-display:swap;unicode-range:U+0030-0039}
-@font-face{font-family:Archivo;src:url('/assets/fonts/archivo-punct.woff2?v=2') format('woff2');font-weight:400 500;font-display:swap;unicode-range:U+0021-0023,U+0025-002D,U+002F,U+003A-003B,U+003F-0040,U+00B7,U+2013-2014,U+2018-2019,U+201C-201D,U+2026}
-@font-face{font-family:'Shippori Mincho';src:url('/assets/fonts/shippori-mincho.woff2?v=2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Bodoni Display';src:url('/assets/fonts/bodoni-display.woff2') format('woff2');font-weight:500;font-display:block}
+@font-face{font-family:'Bodoni Text';src:url('/assets/fonts/bodoni-text.woff2') format('woff2');font-weight:400;font-display:block}
+@font-face{font-family:Archivo;src:url('/assets/fonts/archivo-lower.woff2') format('woff2');font-weight:400 500;font-display:swap;unicode-range:U+0061-007A}
+@font-face{font-family:Archivo;src:url('/assets/fonts/archivo-caps.woff2') format('woff2');font-weight:400 500;font-display:swap;unicode-range:U+0041-005A}
+@font-face{font-family:Archivo;src:url('/assets/fonts/archivo-digits.woff2') format('woff2');font-weight:400 500;font-display:swap;unicode-range:U+0030-0039}
+@font-face{font-family:Archivo;src:url('/assets/fonts/archivo-punct.woff2') format('woff2');font-weight:400 500;font-display:swap;unicode-range:U+0021-0023,U+0025-002D,U+002F,U+003A-003B,U+003F-0040,U+00B7,U+2013-2014,U+2018-2019,U+201C-201D,U+2026}
+@font-face{font-family:'Shippori Mincho';src:url('/assets/fonts/shippori-mincho.woff2') format('woff2');font-weight:500;font-display:swap}
 
-:root{--sumi:#000;--paper:#fff;--shu:#e8001c;--margin:clamp(20px,3.2vw,48px);color-scheme:light}
+:root{--sumi:#000;--paper:#fff;--shu:#e8001c;color-scheme:light}
 *{box-sizing:border-box}
-html,body{margin:0}
-body{background:var(--paper);color:var(--sumi);font-family:Archivo,system-ui,-apple-system,sans-serif;font-size:1.0625rem;line-height:1.5;-webkit-text-size-adjust:100%}
+html,body{margin:0;background:var(--paper)}
+body{color:var(--sumi);font-family:Archivo,system-ui,-apple-system,sans-serif;font-size:1.0625rem;line-height:1.5;-webkit-text-size-adjust:100%}
+:lang(ja) body{font-family:'Shippori Mincho',Archivo,system-ui,serif}
 
-/* The ink lives in .art and nowhere else: every text pixel sits on paper. */
-main{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;min-height:var(--vvh,100dvh)}
-.art{position:relative;min-height:0;overflow:hidden}
-#ink{position:absolute;inset:0;display:block;width:100%;height:100%}
-.text{position:relative;z-index:1;background:var(--paper);min-height:40dvh;display:flex;flex-direction:column;justify-content:center;gap:clamp(14px,2.4vh,26px);
-  padding:clamp(22px,3.4vh,34px) calc(var(--margin) + env(safe-area-inset-right)) calc(var(--margin) + env(safe-area-inset-bottom)) calc(var(--margin) + env(safe-area-inset-left))}
+/* Full bleed: the canvas ignores safe-area insets and every other box. */
+#ink{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0}
+
+main{position:relative;z-index:1;min-height:100dvh;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto}
+
+.text{grid-row:2;display:flex;flex-direction:column;gap:clamp(12px,2.2vh,22px);justify-content:flex-end;
+  padding:0 max(20px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left))}
+.panel{display:flex;flex-direction:column;gap:clamp(10px,1.8vh,18px);max-width:640px}
 
 h1{margin:0;font-weight:400}
-.lead{display:block;font-family:'Bodoni Text',Georgia,serif;font-size:clamp(1.125rem,1.6vw,1.5rem);line-height:1.25}
-.giant{display:block;font-family:'Bodoni Display',Georgia,serif;font-size:var(--giant,15vw);line-height:0.86;white-space:nowrap}
+.lead{display:block;font-family:'Bodoni Text',Georgia,serif;font-size:clamp(1.0625rem,1.5vw,1.5rem);line-height:1.25}
+.giant{display:block;white-space:nowrap;overflow:hidden;font-family:'Bodoni Display',Georgia,serif;font-size:var(--giant,14vw);line-height:0.9;letter-spacing:-0.01em}
+:lang(ja) .giant{font-family:'Shippori Mincho',serif;line-height:1.05;letter-spacing:0}
+.body{margin:0;max-width:44ch}
 
-.info{display:grid;gap:clamp(12px,1.8vh,18px);max-width:48ch}
-.info p{margin:0}
-.ja{font-family:'Shippori Mincho',serif;font-size:1rem;letter-spacing:.06em}
-
-.motion{align-self:start;min-height:48px;padding:0 2px;border:0;border-radius:0;background:none;color:var(--sumi);
-  font:500 1rem/1.3 Archivo,sans-serif;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
-.motion:focus-visible{outline:3px solid var(--sumi);outline-offset:4px}
-
-/* Present only when maintenance.config.json sets a notify endpoint. */
-.notify{display:grid;gap:10px}
-.notify label{font-weight:500}
-.row{display:flex;gap:10px}
-input[type=email]{flex:1;min-width:0;height:52px;padding:0 12px;border:2px solid var(--sumi);border-radius:0;background:var(--paper);color:var(--sumi);font:400 1rem/1.2 Archivo,sans-serif}
-.notify button{height:52px;padding:0 22px;border:0;border-radius:0;background:var(--shu);color:var(--paper);font:500 1rem/1.2 Archivo,sans-serif;cursor:pointer}
-.notify button:focus-visible,input[type=email]:focus-visible{outline:3px solid var(--sumi);outline-offset:3px}
+/* Form: static markup, works without JS; JS only adds the state machine. */
+.notify{display:flex;flex-direction:column;gap:8px;margin:0}
+.notify-lead{margin:0;font-weight:500}
+.notify-label{font-size:1rem}
+.notify-row{display:flex;flex-direction:column;gap:10px}
+input[type=email]{min-width:0;height:50px;padding:0 12px;border:1px solid var(--sumi);border-radius:2px;background:var(--paper);color:var(--sumi);font:400 1rem/1.2 Archivo,sans-serif}
+.notify button{min-height:48px;padding:0 20px;border:0;border-radius:2px;background:var(--sumi);color:var(--paper);font:500 1rem/1.2 Archivo,sans-serif;cursor:pointer}
+.notify button:disabled{cursor:default;opacity:1}
+input[type=email]:focus-visible,.notify button:focus-visible{outline:2px solid var(--shu);outline-offset:2px}
+.notify-helper,.notify-status{margin:0;font-size:.9375rem;line-height:1.4;max-width:44ch}
+.notify-status:empty{display:none}
+.notify[data-state=invalid] input[type=email]{border-color:var(--shu)}
+.notify[data-state=sending] button{background:var(--sumi)}
+.notify-done{margin:0;max-width:44ch}
+.notify-wrap{min-height:132px;display:flex;flex-direction:column;justify-content:flex-start}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
-.status{margin:0;font-size:.9375rem;line-height:1.4;max-width:44ch}
-.status:empty{display:none}
 
-@media (max-width:479px){.row{flex-direction:column}.notify button{width:100%}}
-/* Wide and tall: art on the left, the whole text column on paper. */
-@media (min-width:900px){
-  main{grid-template-columns:minmax(0,1fr) minmax(24rem,32rem);grid-template-rows:minmax(0,1fr)}
-  .text{min-height:0;height:100%;justify-content:flex-end;padding-top:clamp(28px,5vh,56px)}
-}
-/* Landscape phones have no vertical room for a stacked layout. */
+/* One row once the column is wide enough for it. */
+.notify.wide .notify-row{flex-direction:row}
+.notify.wide input[type=email]{flex:1}
+
+/* Landscape phones: two columns, text on the right, sized by height. */
 @media (orientation:landscape) and (max-height:520px){
-  main{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);grid-template-rows:minmax(0,1fr)}
-  .text{min-height:0;height:100%;justify-content:flex-end;padding-top:20px}
+  main{grid-template-columns:minmax(0,1fr) 47%;grid-template-rows:minmax(0,1fr)}
+  .text{grid-column:2;grid-row:1;justify-content:center;padding:16px max(16px, env(safe-area-inset-right)) 16px 20px}
+  .panel{gap:8px}
+  .body{font-size:1rem;max-width:38ch}
 }
-@media (forced-colors:active){#ink{display:none}}
+/* From tablet landscape up: art left, text column on the grid. */
+@media (min-aspect-ratio:1/1) and (min-height:521px){
+  main{grid-template-columns:minmax(0,1fr) min(640px,46%);grid-template-rows:minmax(0,1fr)}
+  .text{grid-column:2;grid-row:1;justify-content:center;padding:32px max(32px, env(safe-area-inset-right)) 32px 40px}
+}
+/* Short landscape phones: the stack and the form must fit without scrolling. */
+@media (orientation:landscape) and (max-height:400px){
+  .text{padding:12px max(16px, env(safe-area-inset-right)) 12px 20px}
+  .panel{gap:6px}
+  .notify{gap:6px}
+  .notify-row{gap:8px}
+  input[type=email]{height:48px}
+  .lead{line-height:1.15}
+  .giant{line-height:0.86}
+}
+/* Very short landscape phones still get the whole stack on screen. */
+@media (orientation:landscape) and (max-height:380px){
+  .text{padding:10px max(16px, env(safe-area-inset-right)) 10px 20px}
+  .panel{gap:4px}
+  .notify{gap:4px}
+  .notify-row{gap:6px}
+  .notify-helper,.notify-status{font-size:.875rem;line-height:1.3}
+}
+/* Portrait tablets and phones keep the text block at the bottom. */
+@media (orientation:portrait){
+  .text{padding-top:16px}
+}
 </style>
 </head>
 <body>
+<canvas id="ink" aria-hidden="true"></canvas>
 <main>
-  <div class="art"><canvas id="ink" aria-hidden="true"></canvas></div>
   <div class="text">
-    <h1>
-      <span class="lead">kawanjapan.com sedang dalam</span>
-      <span class="giant">perbaikan</span>
-    </h1>
-    <div class="info">
-      <p>Kami sedang melakukan pembaruan pada situs. Situs akan segera kembali.</p>
-      <!--eta-->
-      <!--ja--><p class="ja" lang="ja">ただいまメンテナンス中</p><!--/ja-->
-      <button class="motion" id="motion" type="button" aria-pressed="false">Jeda animasi</button>
-      <!--form-->
-      <form class="notify" id="notify" method="post" action="%NOTIFY_ENDPOINT%">
-        <label for="email">Beri tahu saya lewat email</label>
-        <div class="row">
-          <input id="email" name="email" type="email" required placeholder="email@contoh.com" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" />
-          <button type="submit">Beri tahu</button>
-        </div>
-        <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
-      </form>
-      <!--/form-->
-      <p class="status" id="status" role="status" aria-live="polite"></p>
+    <div class="panel">
+      <h1>
+        <span class="lead" data-i18n="lead">kawanjapan.com sedang dalam</span>
+        <span class="giant" data-i18n="giant">perbaikan</span>
+      </h1>
+      <p class="body" data-i18n="body">Kami sedang melakukan pembaruan pada situs. Situs akan segera kembali.</p>
+      <div class="notify-wrap">
+        <!--form-->
+        <form class="notify" id="notify" method="post" action="/api/subscribe" novalidate>
+          <p class="notify-lead" data-i18n="formLead">Kabari saya saat situs kembali</p>
+          <label class="notify-label" for="email" data-i18n="label">Alamat email</label>
+          <div class="notify-row">
+            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="254" aria-describedby="email-helper email-status" />
+            <button type="submit" data-i18n="button">Kabari saya</button>
+          </div>
+          <p class="notify-helper" id="email-helper" data-i18n="helper">Hanya untuk satu pemberitahuan saat situs kembali.</p>
+          <p class="notify-status" id="email-status" role="status" aria-live="polite"></p>
+          <input class="hp" type="text" name="hp" tabindex="-1" aria-hidden="true" autocomplete="off" />
+          <input type="hidden" name="lang" value="id" />
+          <input type="hidden" name="ts" value="0" />
+        </form>
+        <!--/form-->
+      </div>
     </div>
   </div>
 </main>
